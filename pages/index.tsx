@@ -1,15 +1,13 @@
 import { HeadMeta } from "@/components/HeadMeta/HeadMeta";
-import { Inter } from "next/font/google";
-
-import styles from "@/styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+import { getLayout } from "@/components/Layout/Layout";
+function Home() {
   return (
     <>
       <HeadMeta title={"Create Next App"} />
-      <main className={`${styles.main} ${inter.className}`}></main>
+      Main
     </>
   );
 }
+
+Home.getLayout = getLayout;
+export default Home;
