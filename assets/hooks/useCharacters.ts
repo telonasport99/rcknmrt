@@ -8,7 +8,7 @@ export const useCharacters = (): Nullable<CharacterType[]> => {
 
   useEffect(() => {
     axios
-      .get("https://rickandmortyapi.com/api/character")
+      .get(`https://rickandmortyapi.com/api/character`)
       .then((res) => setCharacters(res.data.results));
   }, []);
 
